@@ -2,14 +2,12 @@ server {
         server_name _;
         root /config/www/pydio;
         index index.php;
-        listen 443 ssl;
+        listen 80;
         keepalive_requests    10;
         keepalive_timeout     60 60;
         access_log /config/log/pydio/access_pydio6_log;
         error_log /config/log/pydio/error_pydio6_log;
 
-        ssl_certificate /config/keys/cert.crt;
-        ssl_certificate_key /config/keys/cert.key;
         client_max_body_size 0;
         client_body_buffer_size 128k;
 
